@@ -30,18 +30,30 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposePlaygroundTheme {
+
+
                 // A surface container using the 'background' color from the theme
                 Column {
+                    TopAppBar(
+                        title = {
+                            Text(text = "Page title", maxLines = 2)
+                        },
+                        navigationIcon = {
+
+                        }
+                    )
                     Surface(color = MaterialTheme.colors.background) {
                         Greeting("Android")
                     }
 
                     PhotographerCard()
 
+
                 }
             }
         }
     }
+
 }
 
 
